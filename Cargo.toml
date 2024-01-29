@@ -14,6 +14,22 @@ name = "news_letter"
 
 [dependencies]
 actix-web = "4"
+config = "0.13.4"
+serde = { version = "1", features = ["derive"]}
+uuid = { version = "0.8.1", features = ["v4"] }
+chrono = "0.4.15"
+
+[dependencies.sqlx]
+version = "0.5.7"
+default-features = false
+features = [
+    "runtime-actix-rustls",
+    "macros",
+    "postgres",
+    "uuid",
+    "chrono",
+    "migrate"
+]
 
 [dev-dependencies]
 reqwest = "0.11.23"
