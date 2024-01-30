@@ -1,7 +1,7 @@
 use std::net::TcpListener;
 
 use news_letter::configuration::get_configuration;
-use sqlx::{ PgPool};
+use sqlx::PgPool;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
